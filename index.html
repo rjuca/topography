@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>AC Talk (Topography)</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF8">
+	<script data-main="scripts/main" src="scripts/lib/require.js"></script>
+	<link rel="stylesheet" type="text/css" href="style/topography.css">
+	<script id="global" type="text/x-handlebars-template">
+		<div id="header"/>
+		<div id="content"/>
+	</script>
+	<script id="item" type="text/x-handlebars-template">
+		<span class="item {{addGreyStyle}}">
+			{{#if isSuppressed}}
+			    <input type="checkbox" class="suppressedField">
+			{{else}}
+			    <input checked="checked" type="checkbox" class="suppressedField">
+			{{/if}}
+			    <div class="name" style="{{addTopographyStyle}}">
+			        {{#if hasChildren}}
+			            {{#if children}}
+			                <img class="arrow opened">
+			            {{else}}
+			                <img class="arrow closed">
+			            {{/if}}
+			        {{/if}}
+			        <span class="category-name">{{name}}</span>
+			    </div>
+			    <div class="category-id">
+		            <a href="#">{{id}}</a>
+			    </div>
+
+			</span>
+			<ul class="subcategories"/>
+	</script>
+</head>
+<body/>
+</html>
