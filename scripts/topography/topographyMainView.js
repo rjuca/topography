@@ -1,6 +1,6 @@
 define(["marionette", "underscore", "topographyLayoutView", "topographyHeaderView", "topographyRootView", "topographyCollection"],
 	function(Mnt, _, TopographyLayoutView, TopographyHeaderView, TopographyRootView, TopographyCollection) {
-		var TopographyMainView = Mnt.CollectionView.extend({
+		var TopographyMainView = Mnt.ItemView.extend({
 			template: false,
 			initialize: function(options) {
 				_.extend(this, options);
