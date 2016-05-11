@@ -13,6 +13,7 @@ require.config({
         topographyApp: "topographyApp",
         topographyLayoutView: "topography/topographyLayoutView",
         topographyMainView: "topography/topographyMainView",
+        topographyHeaderView: "topography/topographyHeaderView",
         topographyRootView: "topography/topographyRootView",
         topographyTreeView: "topography/topographyTreeView",
         topographyCollection: "topography/topographyCollection",

@@ -5,7 +5,6 @@ define(["marionette", "topographyMainView"],
 			body: "body"
 		});
 		app.on("start", function() {
-			Backbone.history.start();
 			var mainView = new TopographyMainView();
 			this.body.show(mainView);
 		});

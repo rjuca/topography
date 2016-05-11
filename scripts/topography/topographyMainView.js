@@ -1,5 +1,5 @@
-define(["marionette", "underscore", "topographyLayoutView", "topographyRootView", "topographyCollection"],
-	function(Mnt, _, TopographyLayoutView, TopographyRootView, TopographyCollection) {
+define(["marionette", "underscore", "topographyLayoutView", "topographyHeaderView", "topographyRootView", "topographyCollection"],
+	function(Mnt, _, TopographyLayoutView, TopographyHeaderView, TopographyRootView, TopographyCollection) {
 		var TopographyMainView = Mnt.CollectionView.extend({
 			template: false,
 			initialize: function(options) {
@@ -12,6 +12,7 @@ define(["marionette", "underscore", "topographyLayoutView", "topographyRootView"
 			onRender: function() {
 				var _this = this;
 				var topographyCollection = new TopographyCollection();
+				this.mainLayout.header.show(new TopographyHeaderView());
 				topographyCollection.fetch({
 					dataType: "jsonp",
 					success: function(col, response) {
